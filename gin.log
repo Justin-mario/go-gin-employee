@@ -1,0 +1,10 @@
+[GIN-debug] POST   /api/                     --> github.com/Justin-mario/go-gin-employee/handler.CreateEmployee (4 handlers)
+[GIN-debug] PATCH  /api/:id                  --> github.com/Justin-mario/go-gin-employee/handler.UpdateEmployee (4 handlers)
+[GIN-debug] DELETE /api/:id                  --> github.com/Justin-mario/go-gin-employee/handler.DeleteEmployee (4 handlers)
+[GIN-debug] DELETE /api/                     --> github.com/Justin-mario/go-gin-employee/handler.DeleteAllEmployee (4 handlers)
+[GIN-debug] GET    /                         --> github.com/Justin-mario/go-gin-employee/handler.FindEmployees (3 handlers)
+[GIN-debug] GET    /:id                      --> github.com/Justin-mario/go-gin-employee/handler.FindEmployee (3 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Environment variable PORT is undefined. Using port :8080 by default
+[GIN-debug] Listening and serving HTTP on :8080

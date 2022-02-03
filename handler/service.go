@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"fmt"
 	"github.com/Justin-mario/go-gin-employee/dto"
 	"github.com/Justin-mario/go-gin-employee/entity"
 	"github.com/gin-gonic/gin"
@@ -17,7 +16,6 @@ func FindEmployees(c *gin.Context) {
 
 func CreateEmployee(c *gin.Context) {
 	var input dto.CreateEmployeeInput
-	fmt.Println("user input", input)
 
 	if err := c.ShouldBindJSON(&input); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -25,12 +23,11 @@ func CreateEmployee(c *gin.Context) {
 		return
 	}
 
-	employee := entity.Employee{FirstName: input.FirstName, LastName: input.LastName, Department: input.Department, DateOfEmployment: time.Now()}
-	fmt.Println("user input", input)
+	employee := entity.Employee{FirstName: input.FirstName, LastName: input.LastName, Age: input.Age,
+		Email: input.Email, Department: input.Department, DateOfEmployment: time.Now()}
 
-	fmt.Println("employee object", employee)
 	entity.DB.Create(&employee)
-	c.JSON(http.StatusOK, gin.H{"data": employee})
+	c.JSON(http.StatusOK, gin.H{"data": "Successful"})
 }
 
 func FindEmployee(c *gin.Context) {

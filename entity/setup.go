@@ -27,4 +27,5 @@ func ConnectDatabase() {
 	database.AutoMigrate(&Employee{})
 
 	DB = database
+
 }
